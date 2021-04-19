@@ -14,7 +14,10 @@ public class EntryPoint extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-       FXMLLoader loader= FXMLLoader.load(getClass().getResource("/fxml/Scene.fxml"));
+      
+    	FXMLController controller;
+    	
+    	FXMLLoader loader= new FXMLLoader(getClass().getResource("/fxml/Scene.fxml"));
         Parent root=loader.load();
         
         Scene scene = new Scene(root);
@@ -22,7 +25,7 @@ public class EntryPoint extends Application {
         
         
         Model model = new Model();
-        FXMLController controller= loader.getController();
+        controller= loader.getController();
         controller.setModel(model);
         
         stage.setTitle("JavaFX and Maven");

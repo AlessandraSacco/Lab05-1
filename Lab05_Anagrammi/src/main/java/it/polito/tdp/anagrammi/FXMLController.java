@@ -37,12 +37,15 @@ public class FXMLController {
 
     @FXML
     void doAnagrammi(ActionEvent event) {
-
+     String risultato= txtField.getText();
+    
+     
     }
 
     @FXML
     void doReset(ActionEvent event) {
-
+     txtArea1.clear();
+     txtArea2.clear();
     }
 
     @FXML
